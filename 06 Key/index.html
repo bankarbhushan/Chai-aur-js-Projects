@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>key</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <center>
+      <h1 id="getkey"></h1>
+      <p id="para"></p>
+    </center>
+    <script>
+      const getkey = document.querySelector("#getkey");
+      console.log(getkey);
+      const arr = []; // Declare the array outside the event listener
+
+      window.addEventListener("keydown", (e) => {
+        const result = e.key === " " ? "Space" : e.key;
+
+        getkey.innerHTML = result;
+        arr.push(result); // Add each key press to the array
+        document.getElementById("para").innerHTML = arr.join(" "); // Display the array contents
+      });
+    </script>
+  </body>
+</html>
