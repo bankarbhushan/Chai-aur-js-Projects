@@ -4,69 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the Number</title>
+    <style>
+      body {
+        background-color: #212121;
+        margin: 0;
+        padding: 0;
+        font-family: cursive;
+      }
+      .wrapper {
+        text-align: center;
+        border: 1px solid white;
+        background-color: #168561;
+        color: #fff;
+        padding: 2rem;
+        margin: 2rem auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px white;
+        max-width: 500px;
+        width: 90%;
+      }
+      input {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin: 10px 0;
+        font-size: 16px;
+        font-family: cursive;
+      }
+      #subt {
+        background-color: rgb(99, 254, 106);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .button {
+        border: 1px solid white;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #newGame {
+        color: red;
+      }
+      .resultParas {
+        margin-top: 1rem;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 455px) {
+        body {
+          font-size: 14px;
+        }
+        .wrapper {
+          padding: 1.5rem;
+        }
+        input {
+          font-size: 14px;
+          padding: 8px;
+        }
+        #subt {
+          font-size: 14px;
+        }
+        .resultParas {
+          font-size: 12px;
+        }
+      }
+    </style>
   </head>
-  <style>
-    body {
-      background-color: #212121;
-    }
-    .wrapper {
-      text-align: center;
-      border: 1px solid white;
-      background-color: #168561;
-      color: #fff;
-      font-family: cursive;
-      padding: 2rem;
-      width: 50vw;
-      margin-top: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px white;
-    }
-    input {
-      padding: 10px;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-      margin: 5px;
-      font-size: 16px;
-      font-family: cursive;
-    }
-    #subt {
-      background-color: rgb(99, 254, 106);
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .button {
-      border: 1px solid white;
-      padding: 5px;
-      cursor: pointer;
-    }
-    #newGame {
-      color: red;
-    }
-  </style>
   <body>
-    <center>
-      <div class="wrapper">
-        <h1>Number Guessing Game</h1>
-        <p>Try and guess a random number between 1 and 20</p>
-        <form action="" class="form">
-          <label for="guessField" id="guess">Guess a Number :</label>
-          <input type="text" id="guessField" class="guessField" />
-          <input
-            type="submit"
-            id="subt"
-            value="Submit guess"
-            class="guessSubmit"
-          />
-          <div class="resultParas">
-            <p>Previous Guesses : <span class="guesses"></span></p>
-            <p>Guesses : <span class="lastResult"></span></p>
-            <p class="lowOrHi"></p>
-          </div>
-        </form>
-      </div>
-    </center>
-
+    <div class="wrapper">
+      <h1>Number Guessing Game</h1>
+      <p>Try and guess a random number between 1 and 20</p>
+      <form action="" class="form">
+        <label for="guessField" id="guess">Guess a Number :</label>
+        <input type="text" id="guessField" class="guessField" />
+        <input
+          type="submit"
+          id="subt"
+          value="Submit guess"
+          class="guessSubmit"
+        />
+        <div class="resultParas">
+          <p>Previous Guesses : <span class="guesses"></span></p>
+          <p>Guesses : <span class="lastResult"></span></p>
+          <p class="lowOrHi"></p>
+        </div>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
